@@ -20,14 +20,25 @@ class BaseController extends Controller
             'data'    => $result,
             'message' => $message,
         ];
-
-
         return response()->json($response, 200);
+        /*Explanation: the sendResponse will send a response to the frontend user. For example, a succesfull PUT request response will be something like this:
+        {
+        "success": true,
+        "data": {
+            "id": 1,
+            "name": "Gyertyaedited",
+            "detail": "szepedited",
+            "created_at": "25/03/2020",
+            "updated_at": "25/03/2020"
+        },
+        "message": "Product updated successfully."
+}
+        */
     }
 
 
     /**
-     * return error response.
+     * return error response to the fronted, when the request from the frontend is not OK. For example: token is wrong, data can't be validated...
      *
      * @return \Illuminate\Http\Response
      */
@@ -38,12 +49,9 @@ class BaseController extends Controller
             'message' => $error,
         ];
 
-
         if(!empty($errorMessages)){
             $response['data'] = $errorMessages;
         }
-
-
         return response()->json($response, $code);
     }
 }

@@ -85,7 +85,7 @@
                 </div>
 
                 <div class="links">
-                    <p>This is we it should work:</p>
+                    <p>This is where it should work:</p>
                     <a href="http://127.0.0.1:8000/api/products">http://127.0.0.1:8000/api/products</a>
                     <p>This is the source of this work:</p>
                     <a href="https://www.itsolutionstuff.com/post/laravel-6-rest-api-with-passport-tutorialexample.html">https://www.itsolutionstuff.com/post/laravel-6-rest-api-with-passport-tutorialexample.html</a>
